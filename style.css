@@ -42,4 +42,13 @@
 .sendButton{
     width: 100px;
     color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.messages{
+    margin-top: 10px;
+    height: 100px;
+    background: white;
+    width: 80%;
 }
