@@ -1,0 +1,834 @@
+{
+  "Teams": [
+    {
+      "name": "Team 1",
+      "logo": "imageurl",
+      "field": {
+        "image": "img-url",
+        "direction": "street direction",
+        "name": "field-name"
+      },
+      "last-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      },
+      "next-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      }
+    },
+    {
+      "name": "Team 1",
+      "logo": "imageurl",
+      "field": {
+        "image": "img-url",
+        "direction": "street direction",
+        "name": "field-name"
+      },
+      "last-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      },
+      "next-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      }
+    },
+    {
+      "name": "Team 1",
+      "logo": "imageurl",
+      "field": {
+        "image": "img-url",
+        "direction": "street direction",
+        "name": "field-name"
+      },
+      "last-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      },
+      "next-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      }
+    },
+    {
+      "name": "Team 1",
+      "logo": "imageurl",
+      "field": {
+        "image": "img-url",
+        "direction": "street direction",
+        "name": "field-name"
+      },
+      "last-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      },
+      "next-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      }
+    },
+    {
+      "name": "Team 1",
+      "logo": "imageurl",
+      "field": {
+        "image": "img-url",
+        "direction": "street direction",
+        "name": "field-name"
+      },
+      "last-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      },
+      "next-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      }
+    },
+    {
+      "name": "Team 1",
+      "logo": "imageurl",
+      "field": {
+        "image": "img-url",
+        "direction": "street direction",
+        "name": "field-name"
+      },
+      "last-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      },
+      "next-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      }
+    },
+    {
+      "name": "Team 1",
+      "logo": "imageurl",
+      "field": {
+        "image": "img-url",
+        "direction": "street direction",
+        "name": "field-name"
+      },
+      "last-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      },
+      "next-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      }
+    },
+    {
+      "name": "Team 1",
+      "logo": "imageurl",
+      "field": {
+        "image": "img-url",
+        "direction": "street direction",
+        "name": "field-name"
+      },
+      "last-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      },
+      "next-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      }
+    },
+    {
+      "name": "Team 1",
+      "logo": "imageurl",
+      "field": {
+        "image": "img-url",
+        "direction": "street direction",
+        "name": "field-name"
+      },
+      "last-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      },
+      "next-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      }
+    },
+    {
+      "name": "Team 1",
+      "logo": "imageurl",
+      "field": {
+        "image": "img-url",
+        "direction": "street direction",
+        "name": "field-name"
+      },
+      "last-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      },
+      "next-games": {
+        "game1": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game2": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game3": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game4": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        },
+        "game5": {
+          "rival-name": "Team1",
+          "score": "0-0",
+          "result": "Draw",
+          "date": "9/10",
+          "time": "9:30am"
+        }
+      }
+    }
+  ]
+}

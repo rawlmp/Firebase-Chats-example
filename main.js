@@ -1,3 +1,9 @@
+$.getJSON('nysl-sheet.json', function(data){
+    createTable(data);
+})
+
+
+
 document.getElementById("login").addEventListener("click", login);
 document.getElementById("create-post").addEventListener("click", function() {
     writeNewPost(getCurrentUser(), "yujuu");
@@ -49,19 +55,19 @@ function getPosts() {
         <button class="sendButton" value='Post'>Post Message</button>
       </div>*/
 
-createTable(21);
 function createTable(data){
+    console.log(data.Teams[0].logo);
     var chats = $('.chats');
-    for (var i = 0; i < data; i++) {
-        var element = data[i];
+    for (var i = 0; i < data.Teams.length; i++) {
+        var element = data.Teams[i];
         var $chat = $('<div/>').addClass('chat');
-        var $chatName = $('<h3/>').addClass('chatName').html('Match');
+        var $chatName = $('<h4/>').addClass('chatName').html(element.name);
         var $logoContainer = $('<div/>').addClass('logoContainer');
         var $logoContainer = $('<div/>').addClass('logoContainer');
-        var $logo = $('<img>').addClass('logo').attr('src', 'icons/escudo' + (i+1) + '.png');
+        var $logo = $('<img>').addClass('logo').attr('src', 'icons/' + element.logo);
         var $messages = $('<div/>').addClass('messages');
-        var $postMessage = $('<div/>').addClass('postMessage'); 
-        var $button = $('<button/>').addClass('sendButton').html('Post Message');
+        var $postMessage = $('<input/>').addClass('postMessage'); 
+        var $button = $('<button/>').attr('data-match', element.shortName).addClass('sendButton').html('Go ' + element.shortName + '!!!');
 
         $logoContainer.append($logo);
         $chat.append($chatName, $logoContainer, $messages, $postMessage, $button);

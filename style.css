@@ -11,6 +11,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .logo{
     width: 100px;
@@ -40,15 +41,23 @@
 }
 
 .sendButton{
-    width: 100px;
-    color: black;
-    margin-top: 10px;
+    width: 130px;
+    height: 30px;
+    background: darkred;
+    border-radius: 20px;
+    color: white;
     margin-bottom: 10px;
 }
 
 .messages{
-    margin-top: 10px;
+    margin-top: 20px;
     height: 100px;
     background: white;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.postMessage{
+    height: 20px;
     width: 80%;
 }
