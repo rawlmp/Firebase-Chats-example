@@ -1,0 +1,45 @@
+.container{
+    height: 200px;
+    background: lightblue;
+    border-radius: 20px;
+}
+.chatName{
+    font-family: Helvetica Neue, sans-serif;
+}
+
+.logoContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+.chats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background: lightcoral;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+.chat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: lightgoldenrodyellow;
+    border-radius: 20px;
+    margin: 10px;
+    min-width: 200px;
+    height: 300px;
+}
+
+.sendButton{
+    width: 100px;
+    color: black;
+}
