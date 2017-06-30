@@ -1,7 +1,5 @@
 .container{
     height: 200px;
-    background: lightblue;
-    border-radius: 20px;
 }
 .chatName{
     font-family: Helvetica Neue, sans-serif;
@@ -23,8 +21,6 @@
     justify-content: center;
     align-items: center;
     height: auto;
-    background: lightcoral;
-    border-radius: 20px;
     flex-wrap: wrap;
 }
 
@@ -32,32 +28,78 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background: lightgoldenrodyellow;
-    border-radius: 20px;
+    background: white;
+    box-shadow: 2px 6px 13px 0px black;
     margin: 10px;
-    min-width: 200px;
-    height: 300px;
+    min-width: 300px;
+    height: auto;
 }
-
-.sendButton{
-    width: 130px;
-    height: 30px;
-    background: darkred;
-    border-radius: 20px;
-    color: white;
+.postAndButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 10px;
+    width: 80%
+}
+.sendButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #4087fb;
+    color: white;
 }
 
 .messages{
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
-    height: 100px;
+    height: 80px;
     background: white;
     margin-bottom: 10px;
     width: 80%;
+    overflow: scroll;
+    padding-bottom: 100px;
+    box-shadow: inset 0px 0px 5px 0px black;
 }
 
 .postMessage{
-    height: 20px;
-    width: 80%;
+    height: 30px;
+    width: 90%;
+}
+
+.everyPost{
+    height: auto;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 0px 1px 9px 0px black;
+    
+}
+
+.everyPost2{
+    height: auto;
+    padding: 5px;
+    margin: 5px;
+    background: lightcyan;
+    box-shadow: 0px 1px 9px 0px black;
+    
+}
+
+.nameTime{
+    display: flex;
+    color: grey;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.postText{
+    padding-top: 5px;
+    font-family: Helvetica;
+    font-size: 15px;
+}
+
+.postText2{
+    padding-top: 5px;
+    font-family: Helvetica;
+    font-size: 15px;
+    text-align: right;
 }

@@ -14,6 +14,7 @@ function writeNewPost(user, body, chat) {
     var postData = {
         // uid: user.uid,
         name: user.displayName,
+        time: moment().format(),
         body: body,
     };
 
@@ -40,7 +41,7 @@ function login() {
 function getPosts(chat) {
 
     firebase.database().ref(chat).on('value',function(snapshot) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
     });
 
 }
@@ -56,7 +57,7 @@ function getPosts(chat) {
       </div>*/
 
 function createTable(data){
-    console.log(data.Teams[0].logo);
+    // console.log(data.Teams[0].logo);
     var chats = $('.chats');
     for (var i = 0; i < data.Teams.length; i++) {
         var element = data.Teams[i];
@@ -66,35 +67,63 @@ function createTable(data){
         var $logoContainer = $('<div/>').addClass('logoContainer');
         var $logo = $('<img>').addClass('logo').attr('src', 'icons/' + element.logo);
         var $messages = $('<div/>').attr('id', 'cont_' + element.shortName).addClass('messages');
-        var $postMessage = $('<input/>').attr('id', element.shortName).addClass('postMessage'); 
-        var $button = $('<button/>').attr('data-match', element.shortName).addClass('sendButton').html('Go ' + element.shortName + '!!!');
+        var $postAndButton = $('<div/>').addClass('postAndButton');
+        var $postMessage = $('<input/>').attr('id', element.shortName).attr('placeholder','write your post...').addClass('postMessage'); 
+        var $button = $('<button/>').attr('data-match', element.shortName).addClass('sendButton').html('Go');
 
         $logoContainer.append($logo);
-        $chat.append($chatName, $logoContainer, $messages, $postMessage, $button);
+        $postAndButton.append($postMessage, $button);
+        $chat.append($chatName, $logoContainer, $messages, $postAndButton);
         chats.append($chat);
     }
 
     $('.sendButton').on('click', function(){
         var team = $(this).attr('data-match');
         var newpost = $('#' + team).val();
-        var postContainer = $('#cont_' + team);
 
+        if($('#' + team).val().length == 0){
+            return;
+        }
+        
         writeNewPost(getCurrentUser(), newpost, team);
-        refreshChats(team, postContainer);
+        refreshChats(team);
 
     })
 }
 
 
-function refreshChats(team, container){
-    //TODO: Acabar de completar el retorno de los post de firebase
+function refreshChats(team){
     firebase.database().ref(team).on('value',function(snapshot) {
-        console.log(snapshot.val());
+        var postContainer = $('#cont_' + team);
+        var input = $('#' + team);
+        var object = snapshot.val();
+        postContainer.empty();
+        input.val('');
+
+        for (var key in object) {
+            var element = object[key];
+            var isMe = getCurrentUser().displayName == element.name ? true : false;
+            if(!isMe){
+                var everyPost = $('<div/>').addClass('everyPost');
+                var postText = $('<div/>').addClass('postText');                
+            }else{
+                var everyPost = $('<div/>').addClass('everyPost2');
+                var postText = $('<div/>').addClass('postText2');                
+            }
+            var nameTime = $('<div/>').addClass('nameTime');
+            var name = $('<div/>').addClass('name');
+            var time = $('<div/>').addClass('time');
+            
+
+            name.append(element.name.split(' ')[0]);
+            time.append(moment(element.time, 'YYYY-MM-DDThh:mm:ss+02:00').fromNow());
+            nameTime.append(name, time);
+            postText.append(element.body);
+            everyPost.append(nameTime, postText);
+            postContainer.append(everyPost);
+        }
+
+        postContainer.animate({ scrollTop: postContainer.prop("scrollHeight")}, 1000);
+        
     });
-
-    // for (var i = 0; i < content.length; i++) {
-    //     var element = content[i];
-    //     console.log(element);    
-    // }
-
 }
