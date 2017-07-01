@@ -1,13 +1,23 @@
-$.getJSON('nysl-sheet.json', function(data){
-    createTable(data);
-})
-
+firebase.auth().onAuthStateChanged(function(user) {
+if (user) {
+    $('#login').hide();
+    $('#logout').show();
+    $.getJSON('nysl-sheet.json', function(data){
+    
+        var chats = $('.chats');
+        chats.empty();
+        createTable(data);
+    })
+}else{
+    $('#login').show();
+    $('#logout').hide();
+}
+});
 
 
 document.getElementById("login").addEventListener("click", login);
-document.getElementById("create-post").addEventListener("click", function() {
-    writeNewPost(getCurrentUser(), "yujuu");
-});
+document.getElementById("logout").addEventListener("click", logout);
+
 
 function writeNewPost(user, body, chat) {
     // A post entry.
@@ -16,6 +26,7 @@ function writeNewPost(user, body, chat) {
         name: user.displayName,
         time: moment().format(),
         body: body,
+        thumbnail: user.photoURL
     };
 
     // Get a key for a new Post.
@@ -37,7 +48,10 @@ function login() {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider);
 }
-
+function logout(){
+    firebase.auth().signOut().then(function() {
+    });
+}
 function getPosts(chat) {
 
     firebase.database().ref(chat).on('value',function(snapshot) {
@@ -61,11 +75,17 @@ function createTable(data){
     var chats = $('.chats');
     for (var i = 0; i < data.Teams.length; i++) {
         var element = data.Teams[i];
+        var $flipContainer = $('<div/>').addClass('flip-container').attr('data-hover', 'false');
+        var $flipper = $('<div/>').addClass('flipper');
+        var $front = $('<div/>').addClass('front');
+        var $back = $('<div/>').addClass('back');
+
         var $chat = $('<div/>').addClass('chat');
         var $chatName = $('<h4/>').addClass('chatName').html(element.name);
         var $logoContainer = $('<div/>').addClass('logoContainer');
         var $logoContainer = $('<div/>').addClass('logoContainer');
         var $logo = $('<img>').addClass('logo').attr('src', 'icons/' + element.logo);
+        var $logo2 = $('<img>').addClass('logo2').attr('src', 'icons/' + element.logo);        
         var $messages = $('<div/>').attr('id', 'cont_' + element.shortName).addClass('messages');
         var $postAndButton = $('<div/>').addClass('postAndButton');
         var $postMessage = $('<input/>').attr('id', element.shortName).attr('placeholder','write your post...').addClass('postMessage'); 
@@ -74,40 +94,72 @@ function createTable(data){
         $logoContainer.append($logo);
         $postAndButton.append($postMessage, $button);
         $chat.append($chatName, $logoContainer, $messages, $postAndButton);
-        chats.append($chat);
-    }
+        $back.append($chat);
+        $front.append($logo2);
+        $flipper.append($front, $back);
+        $flipContainer.append($flipper);
+        chats.append($flipContainer);
 
-    $('.sendButton').on('click', function(){
+        var container_width = parseFloat($chat.css('width')) + parseFloat($chat.css('margin')) *2;
+        var container_final_width = container_width * data.Teams.length
+
+    }
+        console.log(container_final_width);
+        chats.css("width", container_final_width);
+    
+
+    $('.sendButton').on('click', function(event){
         var team = $(this).attr('data-match');
         var newpost = $('#' + team).val();
 
         if($('#' + team).val().length == 0){
             return;
         }
-        
-        writeNewPost(getCurrentUser(), newpost, team);
-        refreshChats(team);
 
+        writeNewPost(getCurrentUser(), newpost, team);
+        refreshChats(team, event);
     })
+        $(".flip-container").hover(function(){
+            console.log("hover");
+            $($(this)).attr('data-hover', 'true');
+        }, function() {
+            $(this).attr('data-hover', 'false');
+        });
+
+        $('.front').click(function(event){
+            var parent = event.target.parentNode.parentNode;
+            parent.classList.toggle("flip");
+            $('.flip-container').not(parent).removeClass('flip');
+        })
+    
 }
 
 
-function refreshChats(team){
+
+
+function refreshChats(team, event){
+    var parent = event.target.offsetParent.offsetParent.offsetParent;
+    console.log(parent);
     firebase.database().ref(team).on('value',function(snapshot) {
         var postContainer = $('#cont_' + team);
         var input = $('#' + team);
         var object = snapshot.val();
         postContainer.empty();
         input.val('');
+        
+        //TODO: Arreglar el valor hover pues se desvanece al cambiar de browser
+        if(parent.getAttribute('data-hover') != 'true'){
+            alert('hola');
+        }
 
         for (var key in object) {
             var element = object[key];
             var isMe = getCurrentUser().displayName == element.name ? true : false;
             if(!isMe){
-                var everyPost = $('<div/>').addClass('everyPost');
+                var everyPost = $('<div/>').addClass('bubble me');
                 var postText = $('<div/>').addClass('postText');                
             }else{
-                var everyPost = $('<div/>').addClass('everyPost2');
+                var everyPost = $('<div/>').addClass('bubble you');
                 var postText = $('<div/>').addClass('postText2');                
             }
             var nameTime = $('<div/>').addClass('nameTime');
