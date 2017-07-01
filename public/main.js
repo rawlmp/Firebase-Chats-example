@@ -133,7 +133,10 @@ function createTable(data){
         $('.front').click(function(event){
             var parent = event.target.parentNode.parentNode;
             parent.classList.toggle("flip");
+            var team = parent.getAttribute('data-parent')
             $('.flip-container').not(parent).removeClass('flip');
+            var budget = $('.front').find('[data-budget="' + team + '"]');
+            budget.hide();
         })
     
 }
@@ -156,6 +159,8 @@ function refreshChats(team, event){
         var budget = $('.front').find('[data-budget="' + team + '"]');
         if(!parent2.hasClass('flip')){
             budget.show();  
+        }else{
+            budget.hide();
         }
 
         for (var key in object) {
