@@ -77,24 +77,26 @@ function createTable(data){
         var $back = $('<div/>').addClass('back');
 
         var $chat = $('<div/>').addClass('chat');
+        var $nameAndLogo = $('<div/>').attr('data-nal', element.shortName).hide();
         var $chatName = $('<h4/>').addClass('chatName').html(element.name);
-        var $logoContainer = $('<div/>').addClass('logoContainer');
         var $logoContainer = $('<div/>').addClass('logoContainer');
         var $budget = $('<div/>').addClass('budget').attr('data-budget', element.shortName).html('New!').hide();
         var $logo = $('<img>').addClass('logo').attr('src', 'icons/' + element.logo);
-        var $logo2 = $('<img>').addClass('logo2').attr('src', 'icons/' + element.logo);        
-        var $messages = $('<div/>').attr('id', 'cont_' + element.shortName).addClass('messages');
-        var $postAndButton = $('<div/>').addClass('postAndButton').hide();
+        var $logo2 = $('<img>').addClass('logo2').attr('src', 'icons/' + element.logo).css('pointer-events','none');        
+        var $messages = $('<div/>').attr('id', 'cont_' + element.shortName).attr('data-messages', element.shortName).addClass('messages').hide();
+        var $loader = $('<div/>').addClass('loader').attr('data-loader', element.shortName).hide();
+        var $postAndButton = $('<div/>').addClass('postAndButton').attr('data-pab', element.shortName).hide();
         var $postMessage = $('<input/>').attr('id', element.shortName).attr('placeholder','write your post...').addClass('postMessage'); 
-        var $button = $('<button/>').attr('data-match', element.shortName).addClass('sendButton').html('Go');
-        var $button2 = $('<button/>').attr('data-match', element.shortName).addClass('showButton').html('Show Messages');
+        var $button = $('<button/>').attr('data-match', element.shortName).addClass('btn btn-sm btn-default').addClass('glyphicon glyphicon-play').addClass('sendButton');
+        var $button2 = $('<button/>').attr('data-match', element.shortName).addClass('btn btn-md btn-success').addClass('showButton').html('Show Messages');
         var $fakeButton = $('<button/>').attr('data-fake', element.shortName).addClass('btn btn-sm btn-info').addClass('fakeButton').html('Send Fake Message').hide();
         
 
         $logoContainer.append($logo);
+        $nameAndLogo.append($chatName, $logoContainer);
         $postAndButton.append($postMessage, $button);
-        $messages.append($button2);
-        $chat.append($chatName, $logoContainer, $messages, $postAndButton);
+        $messages.append($loader);
+        $chat.append($nameAndLogo, $messages, $postAndButton, $button2);
         $back.append($chat);
         $front.append($logo2, $budget, $fakeButton);
         $flipper.append($front, $back);
@@ -123,11 +125,18 @@ function createTable(data){
 
     $('.showButton').on('click', function(event){
         var team = $(this).attr('data-match');
-        $('.postAndButton').show();
+        $('.back').find('[data-pab="' + team + '"]').show();
+        $('.front').find('[data-fake="' + team + '"]').show();
         $(this).hide();
-        var fakebutton = $('.front').find('[data-fake="' + team + '"]');
-        fakebutton.show();
-        refreshChats(team, event);
+        var nameAndLogo = $('.back').find('[data-nal="' + team + '"]');
+        console.log(nameAndLogo);
+        nameAndLogo.slideDown('slow');
+        var messages = $('.back').find('[data-messages="' + team + '"]');
+        messages.slideDown('slow', function(){
+            $('.back').find('[data-loader="' + team + '"]').show();            
+            refreshChats(team, event);      
+        });
+        
         
     })
 
@@ -165,7 +174,7 @@ function fakeMessage(chat){
 
 
 function refreshChats(team, event){
-    var parent = event.target.offsetParent.offsetParent.offsetParent;
+    // var parent = event.target.offsetParent.offsetParent.offsetParent;
     // console.log(event);
     firebase.database().ref(team).on('value',function(snapshot) {
         // console.log(team);
