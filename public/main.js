@@ -4,7 +4,8 @@ if (user) {
     $('#logout').show();
     $('#welcome').hide();
     $('#welcome2').hide();
-    $('#info').show();  
+    $('#info').show();
+    $('.container').show(); 
     $.getJSON('nysl-sheet.json', function(data){
     
         var chats = $('.chats');
@@ -16,7 +17,8 @@ if (user) {
     $('#logout').hide();
     $('#welcome').show();
     $('#welcome2').show();
-    $('#info').hide();         
+    $('#info').hide();
+    $('.container').hide();       
 }
 });
 
@@ -59,22 +61,10 @@ function logout(){
     });
 }
 function getPosts(chat) {
-
     firebase.database().ref(chat).on('value',function(snapshot) {
         // console.log(snapshot.val());
     });
-
 }
-/*  <div class="chats">
-      <div class="chat">
-        <h3 class="chatName">Nombre Chat</h3>
-        <div class="logoContainer">
-          <img class='logo' src="icons/escudo1.png" alt="thumbnail">
-        </div>
-        <div class="messages"></div>
-        <div class="postMessage"></div>
-        <button class="sendButton" value='Post'>Post Message</button>
-      </div>*/
 
 function createTable(data){
     // console.log(data.Teams[0].logo);
@@ -94,10 +84,11 @@ function createTable(data){
         var $logo = $('<img>').addClass('logo').attr('src', 'icons/' + element.logo);
         var $logo2 = $('<img>').addClass('logo2').attr('src', 'icons/' + element.logo);        
         var $messages = $('<div/>').attr('id', 'cont_' + element.shortName).addClass('messages');
-        var $postAndButton = $('<div/>').addClass('postAndButton');
+        var $postAndButton = $('<div/>').addClass('postAndButton').hide();
         var $postMessage = $('<input/>').attr('id', element.shortName).attr('placeholder','write your post...').addClass('postMessage'); 
         var $button = $('<button/>').attr('data-match', element.shortName).addClass('sendButton').html('Go');
         var $button2 = $('<button/>').attr('data-match', element.shortName).addClass('showButton').html('Show Messages');
+        var $fakeButton = $('<button/>').attr('data-fake', element.shortName).addClass('btn btn-sm btn-info').addClass('fakeButton').html('Send Fake Message').hide();
         
 
         $logoContainer.append($logo);
@@ -105,7 +96,7 @@ function createTable(data){
         $messages.append($button2);
         $chat.append($chatName, $logoContainer, $messages, $postAndButton);
         $back.append($chat);
-        $front.append($logo2, $budget);
+        $front.append($logo2, $budget, $fakeButton);
         $flipper.append($front, $back);
         $flipContainer.append($flipper);
         chats.append($flipContainer);
@@ -114,7 +105,7 @@ function createTable(data){
         var container_final_width = container_width * data.Teams.length
 
     }
-        // console.log(container_final_width);
+        console.log(container_final_width);
         chats.css("width", container_final_width);
     
 
@@ -127,27 +118,50 @@ function createTable(data){
         }
 
         writeNewPost(getCurrentUser(), newpost, team);
-        refreshChats(team, event, );
+        // refreshChats(team, event, );
     })
 
     $('.showButton').on('click', function(event){
         var team = $(this).attr('data-match');
-        refreshChats(team, event);
+        $('.postAndButton').show();
         $(this).hide();
+        var fakebutton = $('.front').find('[data-fake="' + team + '"]');
+        fakebutton.show();
+        refreshChats(team, event);
+        
     })
 
-        $('.front').click(function(event){
-            var parent = event.target.parentNode.parentNode;
-            parent.classList.toggle("flip");
-            var team = parent.getAttribute('data-parent')
-            $('.flip-container').not(parent).removeClass('flip');
-            var budget = $('.front').find('[data-budget="' + team + '"]');
-            budget.hide();
-        })
+    $('.front').click(function(event){
+        var parent = event.target.parentNode.parentNode;
+        parent.classList.toggle("flip");
+        var team = parent.getAttribute('data-parent')
+        $('.flip-container').not(parent).removeClass('flip');
+        var budget = $('.front').find('[data-budget="' + team + '"]');
+        budget.hide();
+    })
+
+    $('.fakeButton').on('click', function(event){
+        var team = $(this).attr('data-fake');
+        fakeMessage(team);
+    })
     
 }
 
+function fakeMessage(chat){
+    var postData = {
+        // uid: user.uid,
+        name: 'Faker',
+        time: moment().format(),
+        body: 'this is a fake message',
+    };
 
+    var newPostKey = firebase.database().ref().child(chat).push().key;
+
+    var updates = {};
+    updates['/'+chat+'/' + newPostKey] = postData;
+
+    firebase.database().ref().update(updates);
+}
 
 
 function refreshChats(team, event){

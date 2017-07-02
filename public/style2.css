@@ -234,6 +234,11 @@
     right: -9px;    
 }
 
+.fakeButton{
+    position: absolute;
+    bottom: 2px;
+}
+
 /*Flip*/
 /* entire container, keeps perspective */
 .flip-container {
