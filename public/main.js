@@ -2,6 +2,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 if (user) {
     $('#login').hide();
     $('#logout').show();
+    $('#welcome').hide();
+    $('#welcome2').hide();
+    $('#info').show();  
     $.getJSON('nysl-sheet.json', function(data){
     
         var chats = $('.chats');
@@ -11,6 +14,9 @@ if (user) {
 }else{
     $('#login').show();
     $('#logout').hide();
+    $('#welcome').show();
+    $('#welcome2').show();
+    $('#info').hide();         
 }
 });
 
@@ -35,11 +41,11 @@ function writeNewPost(user, body, chat) {
     var updates = {};
     updates['/'+chat+'/' + newPostKey] = postData;
 
-    return firebase.database().ref().update(updates);
+    firebase.database().ref().update(updates);
 }
 
 function getCurrentUser() {
-    console.log(firebase.auth().currentUser);
+    // console.log(firebase.auth().currentUser);
     return firebase.auth().currentUser;
 }
 
@@ -108,7 +114,7 @@ function createTable(data){
         var container_final_width = container_width * data.Teams.length
 
     }
-        console.log(container_final_width);
+        // console.log(container_final_width);
         chats.css("width", container_final_width);
     
 
@@ -146,12 +152,13 @@ function createTable(data){
 
 function refreshChats(team, event){
     var parent = event.target.offsetParent.offsetParent.offsetParent;
-    console.log(event);
+    // console.log(event);
     firebase.database().ref(team).on('value',function(snapshot) {
-        console.log(team);
+        // console.log(team);
         var postContainer = $('#cont_' + team);
         var input = $('#' + team);
         var object = snapshot.val();
+        var me = getCurrentUser().displayName;
         postContainer.empty();
         input.val('');
         
@@ -165,7 +172,7 @@ function refreshChats(team, event){
 
         for (var key in object) {
             var element = object[key];
-            var isMe = getCurrentUser().displayName == element.name ? true : false;
+            var isMe = me == element.name ? true : false;
             if(!isMe){
                 var everyPost = $('<div/>').addClass('bubble me');
                 var postText = $('<div/>').addClass('postText');                

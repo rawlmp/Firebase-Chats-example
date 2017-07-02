@@ -46,7 +46,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 80vh;
+    height: 65vh;
 }
 
 .chat{
@@ -212,7 +212,7 @@
 
 .me {
     float: left;   
-    margin: 5px 45px 5px 20px; 
+    margin: 5px 5px 5px 20px; 
     background-color: #F2F2F2;
             
 }
@@ -225,7 +225,7 @@
 
 .you {
     float: right;    
-    margin: 5px 20px 5px 45px;         
+    margin: 5px 20px 5px 5px;         
 }
 
 .you::before {
@@ -287,7 +287,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: #ad1a43;
+    background: #ff9800;
     -webkit-box-shadow: 2px 6px 13px 0px black;
             box-shadow: 2px 6px 13px 0px black;
     margin: 10px;

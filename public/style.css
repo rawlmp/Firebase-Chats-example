@@ -106,13 +106,13 @@
     display: flex;
     color: grey;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 8px;
 }
 
 .postText{
     padding-top: 5px;
     font-family: Helvetica;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .postText2{
@@ -151,7 +151,7 @@
 
 .me {
     float: left;   
-    margin: 5px 45px 5px 20px; 
+    margin: 5px 5px 5px 20px; 
     background-color: #F2F2F2;
             
 }
@@ -163,7 +163,7 @@
 
 .you {
     float: right;    
-    margin: 5px 20px 5px 45px;         
+    margin: 5px 20px 5px 5px;         
 }
 
 .you::before {
