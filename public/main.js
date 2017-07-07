@@ -22,6 +22,36 @@ if (user) {
 }
 });
 
+//Enable notifications on Chrome
+// request permission on page load
+document.addEventListener('DOMContentLoaded', function () {
+    if (!Notification) {
+        alert('Desktop notifications not available in your browser. Try Chromium.'); 
+        return;
+    }
+
+    if (Notification.permission !== "granted")
+        Notification.requestPermission();
+    });
+
+    function notifyMe(msg) {
+    if (Notification.permission !== "granted")
+        Notification.requestPermission();
+    else {
+        var notification = new Notification('Notification title', {
+        icon: 'https://pbs.twimg.com/media/C1Uv6r0WQAAOHCO.jpg',
+        body: msg,
+        });
+
+        notification.onclick = function () {
+        // window.location.reload();
+        this.close();    
+        };
+
+    }
+
+}
+
 
 document.getElementById("login").addEventListener("click", login);
 document.getElementById("logout").addEventListener("click", logout);
@@ -107,6 +137,7 @@ function createTable(data){
         var container_final_width = container_width * data.Teams.length
 
     }
+        $('.container').slideDown('slow');
         console.log(container_final_width);
         chats.css("width", container_final_width);
     
@@ -184,37 +215,43 @@ function refreshChats(team, event){
         var me = getCurrentUser().displayName;
         postContainer.empty();
         input.val('');
-        
-        var parent2 = $('.chats').find('[data-parent="' + team + '"]');
-        var budget = $('.front').find('[data-budget="' + team + '"]');
-        if(!parent2.hasClass('flip')){
-            budget.show();  
-        }else{
-            budget.hide();
-        }
-
-        for (var key in object) {
-            var element = object[key];
-            var isMe = me == element.name ? true : false;
-            if(!isMe){
-                var everyPost = $('<div/>').addClass('bubble me');
-                var postText = $('<div/>').addClass('postText');                
+        console.log(object == null);
+        if(object != null){
+            var parent2 = $('.chats').find('[data-parent="' + team + '"]');
+            var budget = $('.front').find('[data-budget="' + team + '"]');
+            if(!parent2.hasClass('flip')){
+                budget.show();
+                var msg = 'New message in ' + team + ' group';
+                notifyMe(msg);
             }else{
-                var everyPost = $('<div/>').addClass('bubble you');
-                var postText = $('<div/>').addClass('postText2');                
+                budget.hide();
             }
-            var nameTime = $('<div/>').addClass('nameTime');
-            var name = $('<div/>').addClass('name');
-            var time = $('<div/>').addClass('time');
-            
 
-            name.append(element.name.split(' ')[0]);
-            time.append(moment(element.time, 'YYYY-MM-DDThh:mm:ss+02:00').fromNow());
-            nameTime.append(name, time);
-            postText.append(element.body);
-            everyPost.append(nameTime, postText);
-            postContainer.append(everyPost);
-        }
+            for (var key in object) {
+                var element = object[key];
+                var isMe = me == element.name ? true : false;
+                if(!isMe){
+                    var everyPost = $('<div/>').addClass('bubble me');
+                    var postText = $('<div/>').addClass('postText');                
+                }else{
+                    var everyPost = $('<div/>').addClass('bubble you');
+                    var postText = $('<div/>').addClass('postText2');                
+                }
+                var nameTime = $('<div/>').addClass('nameTime');
+                var name = $('<div/>').addClass('name');
+                var time = $('<div/>').addClass('time');
+                
+
+                name.append(element.name.split(' ')[0]);
+                time.append(moment(element.time, 'YYYY-MM-DDThh:mm:ss+02:00').fromNow());
+                nameTime.append(name, time);
+                postText.append(element.body);
+                everyPost.append(nameTime, postText);
+                postContainer.append(everyPost);
+            }
+        }else{
+                postContainer.html('No messages yet...');
+            }
 
         postContainer.animate({ scrollTop: postContainer.prop("scrollHeight")}, 1000);
         
