@@ -118,7 +118,7 @@ function createTable(data){
         var $postAndButton = $('<div/>').addClass('postAndButton').attr('data-pab', element.shortName).hide();
         var $postMessage = $('<input/>').attr('id', element.shortName).attr('placeholder','write your post...').addClass('postMessage'); 
         var $button = $('<button/>').attr('data-match', element.shortName).addClass('btn btn-sm btn-default').addClass('glyphicon glyphicon-play').addClass('sendButton');
-        var $button2 = $('<button/>').attr('data-match', element.shortName).addClass('btn btn-md btn-success').addClass('showButton').html('Show Messages');
+        var $button2 = $('<button/>').attr('data-match', element.shortName).addClass('btn btn-md btn-success').addClass('showButton').html('Subscribe to chat');
         var $fakeButton = $('<button/>').attr('data-fake', element.shortName).addClass('btn btn-sm btn-info').addClass('fakeButton').html('Send Fake Message').hide();
         
 

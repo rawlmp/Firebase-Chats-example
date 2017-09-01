@@ -15,6 +15,21 @@
                 "time": "9:45am",
                 "fieldMapUrl": "maps.google.es"
             }
+        },{
+            "teams": {
+                "name": "Team 1 vs Team 2",
+                "t1name": "Manchester People F.C",
+                "t1logo": "media/escudos/escudo1.png",
+                "t2name": "Revelion Kids",
+                "t2logo": "media/escudos/escudo5.png",
+                "field": "Chicago Arena",
+                "fieldImage": "media/estadio/estadio1.jpg",
+                "fieldDirecction": "2805 Arches Drive, Plainfield, IL 60586, EE. UU.",
+                "matchId": "0",
+                "date": "9/10",
+                "time": "9:45am",
+                "fieldMapUrl": "maps.google.es"
+            }
         },
         {
             "teams": {

@@ -1,255 +1,255 @@
 .buttons{
-    width: 100%;
-    height: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+	width: 100%;
+	height: 100px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
 }
 
 .container{
-    height: auto;
-    overflow-x: scroll;
-    
+	height: auto;
+	overflow-x: scroll;
+	
 }
 .chatName{
-    font-family: Helvetica Neue, sans-serif;
+	font-family: Helvetica Neue, sans-serif;
 }
 
 .logoContainer{
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 20px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	margin-bottom: 20px;
 }
 .logo{
-    width: 100px;
-    height: 100px;
+	width: 100px;
+	height: 100px;
 }
 
 .chats{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 70vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+		-ms-flex-pack: start;
+			justify-content: flex-start;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	height: 70vh;
 }
 
 .chat{
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: white;
-    box-shadow: 2px 6px 13px 0px black;
-    margin: 10px;
-    width: 300px;
-    height: 480px;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	background: white;
+	box-shadow: 2px 6px 13px 0px black;
+	margin: 10px;
+	width: 300px;
+	height: 480px;
 }
 
 .budget{
-    height: 50px;
-    width: 50px;
-    background: red;
-    color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    border-radius: 50%;
-    position: absolute;
-    right: -20px;
-    top: -20px;
-    border: 2px solid black;
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
-    -webkit-animation: heartbeat 1s infinite;
-    animation: heartbeat 1s infinite;
+	height: 50px;
+	width: 50px;
+	background: red;
+	color: white;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	border-radius: 50%;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+	border: 2px solid black;
+	-webkit-transform: rotate(30deg);
+			transform: rotate(30deg);
+	-webkit-animation: heartbeat 1s infinite;
+	animation: heartbeat 1s infinite;
 }
 .postAndButton{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 10px;
-    width: 80%
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	margin-bottom: 10px;
+	width: 80%
 }
 .sendButton{
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    background: #4087fb;
-    color: white;
+	margin-left: 5px;
+	width: 30px;
+	height: 30px;
+	background: #4087fb;
+	color: white;
 }
 
 .showButton{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .messages{
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 20px;
-    height: 200px;
-    background: white;
-    margin-bottom: 10px;
-    width: 80%;
-    overflow: scroll;
-    padding-bottom: 100px;
-    box-shadow: 0px 0px 5px 0px black;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+	margin-top: 20px;
+	height: 200px;
+	background: white;
+	margin-bottom: 10px;
+	width: 80%;
+	overflow: scroll;
+	padding-bottom: 100px;
+	box-shadow: 0px 0px 5px 0px black;
 }
 
 .postMessage{
-    height: 30px;
-    padding-left: 5px;
-    width: 90%;
+	height: 30px;
+	padding-left: 5px;
+	width: 90%;
 }
 
 .everyPost{
-    height: auto;
-    padding: 5px;
-    margin: 5px;
-    box-shadow: 0px 1px 9px 0px black;
-    
+	height: auto;
+	padding: 5px;
+	margin: 5px;
+	box-shadow: 0px 1px 9px 0px black;
+	
 }
 
 .everyPost2{
-    height: auto;
-    padding: 5px;
-    margin: 5px;
-    background: lightcyan;
-    box-shadow: 0px 1px 9px 0px black;
-    
+	height: auto;
+	padding: 5px;
+	margin: 5px;
+	background: lightcyan;
+	box-shadow: 0px 1px 9px 0px black;
+	
 }
 
 .nameTime{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    color: grey;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    font-size: 12px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	color: grey;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
+	font-size: 12px;
 }
 
 .postText{
-    padding-top: 5px;
-    font-family: Helvetica;
-    font-size: 15px;
+	padding-top: 5px;
+	font-family: Helvetica;
+	font-size: 15px;
 }
 
 .postText2{
-    padding-top: 5px;
-    font-family: Helvetica;
-    font-size: 15px;
-    text-align: right;
+	padding-top: 5px;
+	font-family: Helvetica;
+	font-size: 15px;
+	text-align: right;
 }
 
 /*chat style*/
 
 .bubble{
-    background-color: #F2F2F2;
-    border-radius: 5px;
-    box-shadow: 0 0 6px #B2B2B2;
-    display: inline-block;
-    padding: 10px 18px;
-    position: relative;
-    vertical-align: top;
+	background-color: #F2F2F2;
+	border-radius: 5px;
+	box-shadow: 0 0 6px #B2B2B2;
+	display: inline-block;
+	padding: 10px 18px;
+	position: relative;
+	vertical-align: top;
 }
 
 .bubble::before {
-    background-color: #F2F2F2;
-    content: "\00a0";
-    display: block;
-    height: 16px;
-    position: absolute;
-    top: 11px;
-    transform:             rotate( 29deg ) skew( -35deg );
-        -moz-transform:    rotate( 29deg ) skew( -35deg );
-        -ms-transform:     rotate( 29deg ) skew( -35deg );
-        -o-transform:      rotate( 29deg ) skew( -35deg );
-        -webkit-transform: rotate( 29deg ) skew( -35deg );
-    width:  20px;
+	background-color: #F2F2F2;
+	content: "\00a0";
+	display: block;
+	height: 16px;
+	position: absolute;
+	top: 11px;
+	transform:             rotate( 29deg ) skew( -35deg );
+		-moz-transform:    rotate( 29deg ) skew( -35deg );
+		-ms-transform:     rotate( 29deg ) skew( -35deg );
+		-o-transform:      rotate( 29deg ) skew( -35deg );
+		-webkit-transform: rotate( 29deg ) skew( -35deg );
+	width:  20px;
 }
 
 .me {
-    float: left;   
-    margin: 5px 5px 5px 20px; 
-    background-color: #F2F2F2;
-            
+	float: left;   
+	margin: 5px 5px 5px 20px; 
+	background-color: #F2F2F2;
+			
 }
 
 .me::before {
-    box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
-    left: -9px;           
+	box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+	left: -9px;           
 }
 
 .you {
-    float: right;    
-    margin: 5px 20px 5px 5px;         
+	float: right;    
+	margin: 5px 20px 5px 5px;         
 }
 
 .you::before {
-    box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );
-    right: -9px;    
+	box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );
+	right: -9px;    
 }
 
 .fakeButton{
-    position: absolute;
-    bottom: 2px;
+	position: absolute;
+	bottom: 2px;
 }
 
 /*Flip*/
 /* entire container, keeps perspective */
 .flip-container {
 	-webkit-perspective: 1000px;
-	        perspective: 1000px;
+			perspective: 1000px;
 }
 	/* flip the pane when hovered */
 	.flip-container.hover .flipper, .flip-container.hover .flipper {
 		-webkit-transform: rotateY(180deg);
-		        transform: rotateY(180deg);
+				transform: rotateY(180deg);
 	}
 
 .flip-container, .front, .back {
@@ -262,7 +262,7 @@
 	-webkit-transition: 0.6s;
 	transition: 0.6s;
 	-webkit-transform-style: preserve-3d;
-	        transform-style: preserve-3d;
+			transform-style: preserve-3d;
 
 	position: relative;
 }
@@ -270,7 +270,7 @@
 /* hide back of pane during swap */
 .front, .back {
 	-webkit-backface-visibility: hidden;
-	        backface-visibility: hidden;
+			backface-visibility: hidden;
 
 	position: absolute;
 	top: 0;
@@ -282,32 +282,32 @@
 	z-index: 2;
 	/* for firefox 31 */
 	-webkit-transform: rotateY(0deg);
-	        transform: rotateY(0deg);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: #ff9800;
-    box-shadow: 2px 6px 13px 0px black;
-    margin: 10px;
-    width: 300px;
-    height: 480px;    
+			transform: rotateY(0deg);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	background: #ff9800;
+	box-shadow: 2px 6px 13px 0px black;
+	margin: 10px;
+	width: 300px;
+	height: 480px;    
 }
 
 /* back, initially hidden pane */
 .back {
 	-webkit-transform: rotateY(180deg);
-	        transform: rotateY(180deg);
+			transform: rotateY(180deg);
 }
 
 .flip-container.hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
 	-webkit-transform: rotateY(180deg);
-	        transform: rotateY(180deg);
+			transform: rotateY(180deg);
 }
 
 /*Animations*/
@@ -316,92 +316,92 @@
 {
   0%
   {
-    -webkit-transform: scale( .75 );
-            transform: scale( .75 );
+	-webkit-transform: scale( .75 );
+			transform: scale( .75 );
   }
   20%
   {
-    -webkit-transform: scale( 1 );
-            transform: scale( 1 );
+	-webkit-transform: scale( 1 );
+			transform: scale( 1 );
   }
   40%
   {
-    -webkit-transform: scale( .75 );
-            transform: scale( .75 );
+	-webkit-transform: scale( .75 );
+			transform: scale( .75 );
   }
   60%
   {
-    -webkit-transform: scale( 1 );
-            transform: scale( 1 );
+	-webkit-transform: scale( 1 );
+			transform: scale( 1 );
   }
   80%
   {
-    -webkit-transform: scale( .75 );
-            transform: scale( .75 );
+	-webkit-transform: scale( .75 );
+			transform: scale( .75 );
   }
   100%
   {
-    -webkit-transform: scale( .75 );
-            transform: scale( .75 );
+	-webkit-transform: scale( .75 );
+			transform: scale( .75 );
   }
 }
 @keyframes heartbeat
 {
   0%
   {
-    -webkit-transform: scale( .75 );
-            transform: scale( .75 );
+	-webkit-transform: scale( .75 );
+			transform: scale( .75 );
   }
   20%
   {
-    -webkit-transform: scale( 1 );
-            transform: scale( 1 );
+	-webkit-transform: scale( 1 );
+			transform: scale( 1 );
   }
   40%
   {
-    -webkit-transform: scale( .75 );
-            transform: scale( .75 );
+	-webkit-transform: scale( .75 );
+			transform: scale( .75 );
   }
   60%
   {
-    -webkit-transform: scale( 1 );
-            transform: scale( 1 );
+	-webkit-transform: scale( 1 );
+			transform: scale( 1 );
   }
   80%
   {
-    -webkit-transform: scale( .75 );
-            transform: scale( .75 );
+	-webkit-transform: scale( .75 );
+			transform: scale( .75 );
   }
   100%
   {
-    -webkit-transform: scale( .75 );
-            transform: scale( .75 );
+	-webkit-transform: scale( .75 );
+			transform: scale( .75 );
   }
 }
 
 /*Loader*/
 .loader {
-    position: absolute;
-    top:35%;
-    left: 40%;
-    border: 5px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 5px solid blue;
-    border-right: 5px solid green;
-    border-bottom: 5px solid red;
-    border-left: 5px solid pink;
-    width: 60px;
-    height: 60px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 0.3s linear infinite;
+	position: absolute;
+	top:35%;
+	left: 40%;
+	border: 5px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 5px solid blue;
+	border-right: 5px solid green;
+	border-bottom: 5px solid red;
+	border-left: 5px solid pink;
+	width: 60px;
+	height: 60px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 0.3s linear infinite;
 }
 
 @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg);}
-    100% { -webkit-transform: rotate(360deg);}
+	0% { -webkit-transform: rotate(0deg);}
+	100% { -webkit-transform: rotate(360deg);}
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg);}
+	0% { transform: rotate(0deg);}
+	100% { transform: rotate(360deg);}
 }
