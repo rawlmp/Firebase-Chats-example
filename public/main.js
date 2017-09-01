@@ -103,7 +103,7 @@ function createTable(data){
         var element = data.Teams[i];
         var $flipContainer = $('<div/>').addClass('flip-container').attr('data-parent', element.shortName);
         var $flipper = $('<div/>').addClass('flipper');
-        var $front = $('<div/>').addClass('front');
+        var $front = $('<div/>').addClass('front').addClass("disabled");
         var $back = $('<div/>').addClass('back');
 
         var $chat = $('<div/>').addClass('chat');
@@ -155,6 +155,8 @@ function createTable(data){
     })
 
     $('.showButton').on('click', function(event){
+        var card = $(this.parentElement.parentElement.parentElement.childNodes["0"]);
+        card.removeClass("disabled");
         var team = $(this).attr('data-match');
         $('.back').find('[data-pab="' + team + '"]').show();
         $('.front').find('[data-fake="' + team + '"]').show();

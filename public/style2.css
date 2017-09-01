@@ -299,6 +299,11 @@
 	height: 480px;    
 }
 
+.disabled{
+	background: grey;
+	opacity: .5;
+}
+
 /* back, initially hidden pane */
 .back {
 	-webkit-transform: rotateY(180deg);
